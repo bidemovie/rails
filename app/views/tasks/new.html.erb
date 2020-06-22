@@ -1,0 +1,8 @@
+<h1>Tasks#new</h1>
+<p>Find me in app/views/tasks/new.html.erb</p>
+<%= form_tag('/tasks/create') do %>
+    <textarea name="text" rows="4" cols="40">ここにTODOを記入してください</textarea>
+    <input name="deadline" type="date">
+    <input type="checkbox" name="priority" value="high">high
+      <input type="submit" value="送信する">
+  <% end %>

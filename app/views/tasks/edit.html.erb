@@ -1,0 +1,10 @@
+<%= form_tag("/tasks/#{@task.id}/update")do %>
+  <input name="deadline" type="date" value="<%= @task[:deadline] %>" >
+  <% if @task[:priority] == "high" %>
+    <input type="checkbox" name="priority" value="high" checked="checked" >high
+  <% else %>
+    <input type="checkbox" name="priority" value="high" >high
+  <% end %>
+  <textarea name="text" rows="4" cols="40"><%= @task[:text]%></textarea>
+    <input type="submit" value="更新する">
+<% end %>

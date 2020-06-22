@@ -1,0 +1,25 @@
+<%  @tasks.each do |task| %>
+  <% if task[:priority] == "high" %>
+  <span class="redbox">
+  <%= task[:text] %>
+  <span class="deadline">
+    <%= link_to "完了", "/tasks/#{task.id}/delete", {method:"post"} %>
+    <%= link_to "詳細", "/tasks/#{task.id}" %>
+    <%= task[:deadline] %>
+  </span>
+</span>
+<% else %>
+<span class="graybox">
+  <%= task[:text] %>
+  <span class="deadline">
+    <%= link_to "完了", "/tasks/#{task.id}/delete", {method:"post"} %>
+    <%= link_to "詳細", "/tasks/#{task.id}" %>
+    <%= task[:deadline] %>
+  </span>
+</span>
+<% end %>
+<%  end %>
+
+<span class="toplink">
+<%= link_to "新規投稿ページ", "/tasks/new"%>
+</span>

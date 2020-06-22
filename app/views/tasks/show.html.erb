@@ -1,0 +1,9 @@
+<%= link_to "戻る", {:controller => "home", :action => "top" } %>
+<%= @task[:text] %>
+<%= @task[:deadline] %>
+<% if @task[:priority] == "high" %>
+	<span>priority : high </span> 
+<% end %>
+
+<%= link_to "編集する", "/tasks/#{@task.id}/edit" %>
+<%= link_to "完了", "/tasks/#{@task.id}/delete", {method:"post"} %>

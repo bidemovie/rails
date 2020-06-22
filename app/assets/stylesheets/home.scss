@@ -1,0 +1,23 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.redbox{
+    margin: 10px;
+    padding: 5px;
+    background-color: #FF0000;
+    font-size: 60px;
+    display: block;
+  }
+  .graybox{
+    margin: 10px;
+    padding: 5px;
+    background-color: #b6b6b6;
+    font-size: 60px;
+    display: block;
+  }
+  
+  .deadline{
+    text-align: right;
+    font-size: 20px;
+    display: block;
+  }
